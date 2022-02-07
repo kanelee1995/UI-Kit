@@ -1,0 +1,140 @@
+/* Priamry */
+
+.button {
+  padding: 10px 20px;
+  color: var(--white);
+  border-radius: 4px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 24px;
+  border: none;
+}
+
+.Primary {
+  background-color: var(--purple);
+  color: var(--white);
+}
+
+.Primary:hover {
+  background-color: #5835b0;
+  color: var(--white);
+}
+.Primary:active {
+  background-color: #472c8a;
+  color: var(--white);
+}
+.Primary:disabled {
+  background-color: #e3daf9;
+  color: var(--white);
+}
+.Primary:disabled {
+  background-color: #e3daf9;
+  color: var(--white);
+}
+.Primary:focus,
+.Flat:focus,
+.FlatWhite:focus {
+  border: #11111173 2px solid;
+  padding: 8px 18px 8px 18px;
+}
+
+/* Flat */
+
+.Flat {
+  background-color: transparent;
+  color: var(--purple);
+}
+
+/* Plus Icon */
+
+.plusIcon {
+  padding: 0 8px 0 2px;
+}
+
+.Plus:focus {
+  border: #11111173 2px solid;
+  padding: 8px 18px 8px 18px;
+}
+
+.NoText:hover {
+  background-color: #5835b0;
+}
+.NoText:active {
+  background-color: #472c8a;
+}
+.NoText:disabled {
+  background-color: #e3daf9;
+}
+.NoText:focus {
+  border: #11111173 2px solid;
+  padding: 8px 11.5px 8px 11.5px;
+}
+
+.NoText .plusIcon,
+.NoTextCircle .plusIcon {
+  padding: 0;
+}
+
+.NoText {
+  padding: 10px 13.7px 10px 13.7px;
+}
+
+.NoTextCircle {
+  padding: 10px 12.7px 10px 12.7px;
+  border-radius: 50%;
+}
+.NoTextCircle:hover {
+  background-color: #5835b0;
+}
+.NoTextCircle:active {
+  background-color: #472c8a;
+}
+.NoTextCircle:disabled {
+  background-color: #e3daf9;
+}
+.NoTextCircle:focus {
+  border: #11111173 2px solid;
+  padding: 8px 11px 8px 11px;
+}
+
+/* White */
+
+.White {
+  background-color: var(--white);
+  color: var(--purple);
+}
+
+.FlatWhite {
+  background-color: transparent;
+  color: var(--white);
+}
+
+/* Rounded */
+
+.Rounded {
+  border-radius: 23px;
+}
+
+/* White effect */
+
+.White:hover {
+  background-color: #ffffffda;
+}
+
+.FlatWhite:hover {
+  background-color: #ffffff23;
+}
+.FlatWhite:active {
+  background-color: #ffffff3a;
+}
+
+/* Flat effect */
+
+.Flat:hover {
+  background-color: #6f41e218;
+}
+.Flat:active {
+  background-color: #6f41e23a;
+}
