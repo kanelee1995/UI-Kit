@@ -12,6 +12,15 @@ export const parameters = {
       date: /Date$/,
     },
   },
+  backgrounds: {
+    default: "grey",
+    values: [
+      {
+        name: "grey",
+        value: "#D7D7D7",
+      },
+    ],
+  },
 };
 
 export const decorators = [(Story) => <Center>{Story()}</Center>];

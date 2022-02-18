@@ -50,7 +50,7 @@
 /* Plus Icon */
 
 .plusIcon {
-  padding: 0 8px 0 2px;
+  margin: auto;
 }
 
 .Plus:focus {
@@ -72,18 +72,25 @@
   padding: 8px 11.5px 8px 11.5px;
 }
 
-.NoText .plusIcon,
-.NoTextCircle .plusIcon {
+/* .NoText, .plusIcon,
+.NoTextCircle, .plusIcon {
   padding: 0;
-}
+} */
 
 .NoText {
-  padding: 10px 13.7px 10px 13.7px;
+  height: 44px;
+  width: 46px;
+  padding: 0;
+  /* display: flex;
+  justify-content: center;
+  align-items: center; */
 }
 
 .NoTextCircle {
-  padding: 10px 12.7px 10px 12.7px;
-  border-radius: 50%;
+  height: 44px;
+  width: 44px;
+  border-radius: 100px;
+  padding: 0%;
 }
 .NoTextCircle:hover {
   background-color: #5835b0;
@@ -104,6 +111,7 @@
 .White {
   background-color: var(--white);
   color: var(--purple);
+  box-shadow: none;
 }
 
 .FlatWhite {
@@ -114,7 +122,7 @@
 /* Rounded */
 
 .Rounded {
-  border-radius: 23px;
+  border-radius: 100px;
 }
 
 /* White effect */

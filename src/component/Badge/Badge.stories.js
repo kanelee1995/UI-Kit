@@ -5,4 +5,6 @@ export default {
   component: Badge,
 };
 
-export const Primary = () => <Badge></Badge>;
+export const Primary = () => <Badge variant='Primary'></Badge>;
+export const White = () => <Badge variant='White'></Badge>;
+export const Secondary = () => <Badge variant='Secondary'></Badge>;

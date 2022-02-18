@@ -1,7 +1,8 @@
 import React from "react";
 import "./button.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
+// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+// import { faPlus } from "@fortawesome/free-solid-svg-icons";
+import { HiPlus } from "react-icons/hi";
 
 const Button = (props) => {
   const { variant, children, ...rest } = props;
@@ -12,18 +13,24 @@ const Button = (props) => {
       </button>
       <button className={`button ${variant} Plus `} {...rest}>
         <span className="plusIcon">
-          <FontAwesomeIcon icon={faPlus} size="lg" />
+          <span>
+            <HiPlus size={24} />
+          </span>{" "}
         </span>
         {children}
       </button>
       <button className={`button ${variant} Plus NoText `} {...rest}>
         <span className="plusIcon">
-          <FontAwesomeIcon icon={faPlus} size="lg" />
+          <span>
+            <HiPlus size={24} />
+          </span>{" "}
         </span>{" "}
       </button>
       <button className={`button ${variant} Plus NoTextCircle `} {...rest}>
         <span className="plusIcon">
-          <FontAwesomeIcon icon={faPlus} size="lg" />
+          <span>
+            <HiPlus size={24} />
+          </span>{" "}
         </span>
       </button>
       <button className={`button ${variant} Rounded `} {...rest}>
@@ -31,41 +38,13 @@ const Button = (props) => {
       </button>
       <button className={`button ${variant} Plus Rounded`} {...rest}>
         <span className="plusIcon">
-          <FontAwesomeIcon icon={faPlus} size="lg" />
+          <span>
+            <HiPlus size={24} />
+          </span>{" "}
         </span>
         {children}
       </button>
     </div>
-    // <div className="container">
-    //   <button className={"Default button"} {...rest}>
-    //     {children}
-    //   </button>
-    //   <button className={"Default button Plus"} {...rest}>
-    //     <span className="plusIcon">
-    //       <FontAwesomeIcon icon={faPlus} size="lg" />
-    //     </span>
-    //     {children}
-    //   </button>
-    //   <button className={"Default button Plus NoText"} {...rest}>
-    //     <span className="plusIcon">
-    //       <FontAwesomeIcon icon={faPlus} size="lg" />
-    //     </span>{" "}
-    //   </button>
-    //   <button className={"Default button Plus NoTextCircle"} {...rest}>
-    //     <span className="plusIcon">
-    //       <FontAwesomeIcon icon={faPlus} size="lg" />
-    //     </span>
-    //   </button>
-    //   <button className={"Default button Rounded"} {...rest}>
-    //     {children}
-    //   </button>
-    //   <button className={"Default button Plus Rounded"} {...rest}>
-    //     <span className="plusIcon">
-    //       <FontAwesomeIcon icon={faPlus} size="lg" />
-    //     </span>
-    //     {children}
-    //   </button>
-    // </div>
   );
 };
 
