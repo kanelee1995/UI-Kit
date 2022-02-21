@@ -1,0 +1,80 @@
+.popupContainer {
+  height: 314px;
+  width: 481px;
+  padding: 29px 25px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: var(--default);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 39px;
+  position: relative;
+}
+
+.warning {
+  height: 96px;
+  width: 96px;
+  background-color: #ffd81221;
+  border-radius: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.warningLogo path {
+  fill: #ffd812;
+}
+
+.warningHeading {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 32px;
+  line-height: 40px;
+}
+
+.warningText {
+  margin: 8px 0 24px 0;
+}
+
+.popupContainer .White {
+  background-color: transparent;
+  border: 2px solid var(--purple);
+  box-sizing: border-box;
+  height: 44px;
+  width: 89px;
+  padding: 0;
+}
+
+.popupContainer .White:hover {
+  background-color: #6f41e210;
+}
+
+.popupContainer.form {
+  height: 430px;
+  width: 481px;
+  /* padding: 29px 25px; */
+  box-sizing: border-box;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+
+.popupContainer .inputContainer {
+  width: 431px;
+  margin: 0;
+  margin-bottom: 16px;
+}
+
+.popupContainer .indicator.err {
+  position: absolute;
+  top: 12px;
+  right: 12px;
+  background-color: var(--purple);
+}
+
+.popupContainer .indicatorCheck.err {
+  color: var(--white);
+}

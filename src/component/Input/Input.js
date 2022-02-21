@@ -44,7 +44,7 @@ const Input = ({ children }) => {
         </div>
         <div className="right">
           <span className="checkMark">
-            <MdOutlineCheck size={24} />
+            <MdOutlineCheck size={24} />0
           </span>
         </div>
       </div>

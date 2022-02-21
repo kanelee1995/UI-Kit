@@ -1,0 +1,105 @@
+.notiContainer {
+  width: 394px;
+  height: 164px;
+  padding: 20px;
+  background-color: #ffffff;
+  box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
+    0px 4px 16px rgba(51, 51, 51, 0.08);
+  border-radius: 8px;
+  display: grid;
+  margin-bottom: 34px;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto auto 50%;
+  grid-template-areas:
+    "head indicator"
+    "description indicator"
+    "button .";
+}
+
+.head {
+  grid-area: head;
+  font-weight: bold;
+  font-size: 20px;
+  line-height: 28px;
+  color: black;
+}
+.description {
+  grid-area: description;
+  font-size: 16px;
+  line-height: 24px;
+  margin: 8px 0 20px 0;
+}
+.notiButton {
+  grid-area: button;
+}
+
+.close {
+  width: 81px;
+  height: 44px;
+  border: 2px solid var(--purple);
+  border-radius: 4px;
+  background-color: #ffffff;
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.help {
+  width: 73px;
+  height: 44px;
+  /* border-radius: 4px; */
+  background-color: transparent;
+  border: none;
+  color: var(--purple);
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.indicator {
+  height: 100%;
+  grid-area: indicator;
+  width: 56px;
+  height: 56px;
+  background: #27ae5f1f;
+  z-index: 0;
+  justify-self: flex-end;
+  border-radius: 100px;
+  border: none;
+}
+
+.indicatorCheck {
+  color: #27ae5f;
+}
+
+.indicator.err {
+  background-color: #f9e3e3;
+}
+
+.indicatorCheck.err {
+  color: #db524e;
+}
+
+.indicator.info {
+  background-color: #e3daf9;
+}
+
+.indicatorCheck.info {
+  color: #6e41e2;
+}
+
+/* Mobile */
+
+.notiContainerM {
+  width: 306px;
+  height: 140px;
+  padding: 12px;
+  display: flex;
+  flex-direction: column;
+  background-color: #ffffff;
+  box-shadow: var(--default);
+  border-radius: 8px;
+}
+
+.notiContainerM .description {
+  margin-top: 12px;
+}
