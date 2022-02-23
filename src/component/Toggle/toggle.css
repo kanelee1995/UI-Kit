@@ -1,0 +1,102 @@
+.toggleRight {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.toggleTitle {
+  color: #111111;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.describtion {
+  font-size: 13px;
+  line-height: 20px;
+  color: rgba(17, 17, 17, 0.48);
+}
+
+.toggleContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0px;
+  width: 236px;
+  height: 46px;
+  box-sizing: border-box;
+}
+
+.toggleBody {
+  background: rgba(255, 255, 255, 0.88);
+  /* border: 2px solid #e3daf9; */
+  box-shadow: 0px 0px 0px 2px #e3daf9;
+  border-radius: 100px;
+  margin: 0px 12px;
+  height: 24px;
+  width: 48px;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+}
+
+.toggleBody.on:hover {
+  background-color: #5835b0;
+}
+
+.toggleButton.off {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: var(--purple);
+  margin: 4px;
+}
+
+.toggleEndpoint {
+  width: 12px;
+  height: 12px;
+  /* background-color: #e3daf9; */
+  border: 2px solid #e3daf985;
+  border-radius: 100px;
+  margin: 6px 8px 6px 4px;
+}
+
+.toggleBody:hover > .toggleEndpoint.off {
+  border: 2px solid rgba(187, 172, 226, 1);
+}
+
+.toggleBody:focus {
+  box-shadow: 0px 0px 0px 2px rgba(17, 17, 17, 0.48);
+}
+
+.toggleBody.on {
+  background: var(--purple);
+  box-shadow: 0px 0px 0px 2px var(--purple);
+}
+
+.toggleBody.on:focus {
+  box-shadow: 0px 0px 0px 2px #d4d4d4 48%;
+}
+
+.toggleButton.on {
+  width: 16px;
+  height: 16px;
+  border-radius: 100px;
+  background-color: var(--white);
+  margin: 4px 4px 4px 8px;
+  order: 2;
+}
+
+.toggleEndpoint.on {
+  width: 16px;
+  height: 16px;
+  border-radius: 0;
+  margin: 4px 0px 4px 4px;
+  border: none;
+}
+
+.toggleEndpoint.on path {
+  fill: var(--white);
+}

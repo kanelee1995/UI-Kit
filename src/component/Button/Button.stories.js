@@ -1,11 +1,7 @@
 import Button from "./Button";
-// import DarkBackground from "../Center/DarkBackground";
-// import Center from "../Center/Center";
-
 export default {
   title: "Button",
   component: Button,
-  // decorators: [(story) => <Center>{story()}</Center>],
 };
 
 export const Primary = () => <Button variant="Primary">Click!</Button>;

@@ -2,8 +2,10 @@
   --purple: #6e41e2;
   --white: #ffffff;
   --dark: #141414;
-  --default: 0px 4px 4px rgba(51, 51, 51, 0.04),
+  --defaultShadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
     0px 4px 16px rgba(51, 51, 51, 0.08);
+  --hoverShadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
+    0px 4px 56px rgba(51, 51, 51, 0.16);
 }
 
 html {
@@ -15,7 +17,7 @@ html {
   box-sizing: inherit;
 }
 
-.center {
+.global {
   display: flex;
   justify-content: center;
   font-family: Roboto;
@@ -28,4 +30,8 @@ html {
   height:100%;
   width:100%;
   overflow: none; */
+}
+
+.shadow {
+  box-shadow: var(--defaultShadow);
 }

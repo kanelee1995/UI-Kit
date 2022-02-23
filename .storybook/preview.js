@@ -1,6 +1,6 @@
 import React from "react";
 // import { addDecorator } from "@storybook/react";
-import Center from "../src/component/Center/Center";
+import Global from "../src/component/Global/Global";
 
 // addDecorator((story) => <Center>{story()}</Center>);
 
@@ -23,4 +23,4 @@ export const parameters = {
   },
 };
 
-export const decorators = [(Story) => <Center>{Story()}</Center>];
+export const decorators = [(Story) => <Global>{Story()}</Global>];

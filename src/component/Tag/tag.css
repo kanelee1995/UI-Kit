@@ -1,7 +1,7 @@
 .tagContainer {
   width: 58px;
   height: 24px;
-  background: #ffffff;
+  background: var(--white);
   border: 1px solid #f1f1f1;
   box-sizing: border-box;
   box-shadow: 0px 4px 4px rgba(51, 51, 51, 0.04),
@@ -31,11 +31,11 @@
 }
 
 .tagContainer.primary span {
-  color: #ffffff;
+  color: var(--white);
 }
 
 .tagContainer.primary path {
-  fill: #ffffff;
+  fill: var(--white);
 }
 
 .tagContainer.m {
