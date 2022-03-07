@@ -10,21 +10,3 @@
   padding: 0px 8px;
   /* max-height: 22px; */
 }
-
-.Primary {
-  background-color: var(--white);
-  color: var(--purple);
-}
-
-.White {
-  background-color: var(--purple);
-  color: var(--white);
-  border: #f1f1f1 1px solid;
-  box-shadow: 0px 4px 16px 0px #33333314;
-}
-
-.Secondary {
-  color: var(--purple);
-  border: 1px solid #6e41e2;
-  box-sizing: border-box;
-}

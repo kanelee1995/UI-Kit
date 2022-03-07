@@ -1,22 +1,24 @@
 .fileContainer {
-  box-sizing: border-box;
+  /* box-sizing: border-box; */
+  position: relative;
   display: grid;
-  /* flex-direction: row;
-  align-items: center;
-  justify-content: space-between; */
   width: 675px;
   height: 92px;
   background-color: var(--white);
   box-shadow: var(--defaultShadow);
   border-radius: 4px;
-  /* padding: 0 0 0 20px; */
   margin-bottom: 32px;
   grid-template-columns: 20px 75% auto;
   grid-template-rows: auto 4px;
   grid-template-areas:
     ". fileText percent"
-    /* "fileText percent" */
     "progress progress progress";
+}
+
+.fileIcon {
+  position: absolute;
+  left: 326px;
+  top: 30px;
 }
 
 .fileContainer:hover {
@@ -52,7 +54,8 @@
   color: #db524e;
 }
 
-.fileText a {
+.fileText a,
+.selectFile {
   color: var(--purple);
   text-decoration: none;
 }
@@ -78,19 +81,49 @@
   /* position: absolute; */
   height: 4px;
   background-color: var(--purple);
-  width: 66%;
+  width: 0%;
   grid-area: progress;
-  /* justify-self: end; */
+  animation: progress 3s forwards;
+}
+
+@keyframes progress {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+.progressBar.err {
+  animation: progressErr 3s forwards;
+}
+
+@keyframes progressErr {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 66%;
+  }
 }
 
 .fileUploaded {
   display: flex;
   align-items: center;
   justify-self: flex-end;
-  /* margin: 30px 30px 0 0; */
   grid-area: percent;
   height: 56px;
   width: 56px;
   margin: 18px 24px 0 0;
   color: var(--purple);
+}
+
+/* Live demo */
+
+.box__dragndrop,
+.box__uploading,
+.box__success,
+.box__error {
+  display: none;
 }

@@ -1,15 +1,25 @@
 /* Priamry */
 
 .button {
-  padding: 10px 20px;
+  width: 96px;
+  height: 44px;
   color: var(--white);
   border-radius: 4px;
-  font-family: Roboto;
-  font-style: normal;
+  font-family: "Roboto", sans-serif;
   font-weight: normal;
   font-size: 16px;
   line-height: 24px;
   border: none;
+  padding: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  margin: 5px;
+}
+
+.buttonLabel {
+  height: 24px;
 }
 
 .Primary {
@@ -35,9 +45,9 @@
 }
 .Primary:focus,
 .Flat:focus,
+.White:focus,
 .FlatWhite:focus {
-  border: #11111173 2px solid;
-  padding: 8px 18px 8px 18px;
+  box-shadow: inset 0px 0px 0px 2px #11111173;
 }
 
 /* Flat */
@@ -47,15 +57,23 @@
   color: var(--purple);
 }
 
+.Flat .plusIcon path {
+  fill: var(--purple);
+}
 /* Plus Icon */
 
 .plusIcon {
-  margin: auto;
+  width: 24px;
+  height: 24px;
+  margin-right: 4px;
+}
+
+.plusIcon path {
+  fill: var(--white);
 }
 
 .Plus:focus {
-  border: #11111173 2px solid;
-  padding: 8px 18px 8px 18px;
+  box-shadow: inset 0px 0px 0px 2px #11111173;
 }
 
 .NoText:hover {
@@ -68,22 +86,13 @@
   background-color: #e3daf9;
 }
 .NoText:focus {
-  border: #11111173 2px solid;
-  padding: 8px 11.5px 8px 11.5px;
+  box-shadow: inset 0px 0px 0px 2px #11111173;
 }
-
-/* .NoText, .plusIcon,
-.NoTextCircle, .plusIcon {
-  padding: 0;
-} */
 
 .NoText {
   height: 44px;
   width: 46px;
   padding: 0;
-  /* display: flex;
-  justify-content: center;
-  align-items: center; */
 }
 
 .NoTextCircle {
@@ -92,6 +101,12 @@
   border-radius: 100px;
   padding: 0%;
 }
+
+.NoText .plusIcon,
+.NoTextCircle .plusIcon {
+  margin-right: 0px;
+}
+
 .NoTextCircle:hover {
   background-color: #5835b0;
 }
@@ -102,8 +117,7 @@
   background-color: #e3daf9;
 }
 .NoTextCircle:focus {
-  border: #11111173 2px solid;
-  padding: 8px 11px 8px 11px;
+  box-shadow: inset 0px 0px 0px 2px #11111173;
 }
 
 /* White */
@@ -112,6 +126,9 @@
   background-color: var(--white);
   color: var(--purple);
   box-shadow: none;
+}
+.White .plusIcon path {
+  fill: var(--purple);
 }
 
 .FlatWhite {
@@ -145,4 +162,24 @@
 }
 .Flat:active {
   background-color: #6f41e23a;
+}
+
+.Secondary {
+  box-shadow: inset 0px 0px 0px 2px var(--purple);
+  color: var(--purple);
+  background-color: transparent;
+  /* max-height: 41px; */
+}
+
+.Secondary:hover {
+  background-color: #6f41e20a;
+}
+
+.Secondary:focus,
+.Secondary.Plus:focus {
+  box-shadow: inset 0px 0px 0px 2px #11111173;
+}
+
+.Secondary .plusIcon path {
+  fill: var(--purple);
 }

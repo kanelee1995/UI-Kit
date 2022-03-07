@@ -33,7 +33,7 @@
   grid-area: button;
 }
 
-.close {
+/* .close {
   width: 81px;
   height: 44px;
   border: 2px solid var(--purple);
@@ -47,13 +47,12 @@
 .help {
   width: 73px;
   height: 44px;
-  /* border-radius: 4px; */
   background-color: transparent;
   border: none;
   color: var(--purple);
   font-size: 16px;
   line-height: 24px;
-}
+} */
 
 .indicator {
   height: 100%;

@@ -5,6 +5,7 @@ export default {
 };
 
 export const Primary = () => <Button variant="Primary">Click!</Button>;
+export const Secondary = () => <Button variant="Secondary">Click!</Button>;
 
 export const White = () => (
   // <DarkBackground>

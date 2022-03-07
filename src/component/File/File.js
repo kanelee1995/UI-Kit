@@ -1,30 +1,65 @@
-import React from "react";
+import React, { useMemo } from "react";
 import "./file.css";
 import { AiFillFile } from "react-icons/ai";
+import { useDropzone } from "react-dropzone";
+import CountUp from "react-countup";
 
-const File = ({ children }) => {
-  // const { errMsg, completed } = props;
+const File = ({ children, props }) => {
+  const acceptStyle = {
+    backgroundColor: "#6e41e2",
+    color: "#ffffff",
+  };
+
+  const baseStyle = {
+    transition: "backgroundColor .5s ease-in-out",
+  };
+
+  function StyledDropzone(props) {
+    const {
+      getRootProps,
+      getInputProps,
+      isFocused,
+      isDragAccept,
+      isDragReject,
+    } = useDropzone();
+
+    const style = useMemo(
+      () => ({
+        ...baseStyle,
+        ...(isFocused ? {} : {}),
+        ...(isDragAccept ? acceptStyle : {}),
+        ...(isDragReject ? {} : {}),
+      }),
+      [isFocused, isDragAccept, isDragReject]
+    );
+
+    return (
+      <div className="fileContainer" {...getRootProps({ style })}>
+        <input {...getInputProps()} />
+        {isDragAccept ? (
+          <div>
+            <span className="fileIcon">
+              <AiFillFile size={24} />
+            </span>
+          </div>
+        ) : (
+          <div className="fileText">
+            <span>Click to select a file of drag in here</span>
+            <span className="fileTextDefault">
+              PNG, jpg, gif files up to 10 MB in size are available for download
+            </span>
+          </div>
+        )}
+      </div>
+    );
+  }
 
   return (
     <div>
-      {/* Default */}
-      <div className="fileContainer">
-        <div className="fileText">
-          <span>
-            <a href=".">Select a file</a> of drag in form
-          </span>
-          <span className="fileTextDefault">npm</span>
-        </div>
-        <div className="filePercent">{children}</div>
+      <div className="liveDemo">
+        <StyledDropzone />
       </div>
-      {/* Drag File */}
-      <div className="fileContainer dragFile">
-        <span>
-          <AiFillFile size={24} />
-        </span>
-      </div>
-      {/* Downloading */}
-      <div className="fileContainer">
+      <div className="fileContainer DownloadSuccess">
         <div className="fileText">
           <span>Downloading</span>
           <span className="fileTextDefault">
@@ -32,34 +67,36 @@ const File = ({ children }) => {
           </span>
         </div>
         <div className="progressBar"></div>
-        <div className="filePercent">66%</div>
+        <div className="filePercent">
+          <CountUp end={100} duration={3} />
+          <span>%</span>
+        </div>{" "}
       </div>
-      {/* Error */}
-      <div className="fileContainer">
+
+      <div className="fileContainer Error">
         <div className="fileText">
-          <span>
-            <a href=".">Select a file</a> of drag in form
-          </span>
+          <span>Click to select a file of drag in form</span>
+
           <span className="fileTextDefault error">
             The file weight more than 10 MB{" "}
           </span>
         </div>
-        {/* <div className="filePercent"></div> */}
       </div>
-      {/* Net Error */}
-      <div className="fileContainer">
+
+      <div className="fileContainer NetError">
         <div className="fileText">
-          <span>
-            <a href=".">Select a file</a> of drag in form
-          </span>
+          <span>Click to select a file of drag in form</span>
           <span className="fileTextDefault error">
             An error has occurred, upload the file again
           </span>
         </div>
-        <div className="progressBar"></div>
-        <div className="filePercent">66%</div>
+        <div className="progressBar err"></div>
+        <div className="filePercent">
+          <CountUp end={66} duration={3} />
+          <span>%</span>
+        </div>
       </div>
-      {/* Uploaded */}
+
       <div className="fileContainer">
         <div className="fileText">
           <span>

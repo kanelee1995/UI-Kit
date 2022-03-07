@@ -1,0 +1,36 @@
+.filterContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.filter {
+  width: 87px;
+  height: 56px;
+  border: 2px solid #d4d4d4;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.filter.Center {
+  border-left: none;
+  border-right: none;
+}
+
+.filter.Left {
+  border-radius: 4px 0px 0px 4px;
+}
+
+.filter.Right {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.filter:active {
+  border: 2px solid var(--purple);
+}
+
+.filter:hover {
+  border: 2px solid #6b6b6b;
+}

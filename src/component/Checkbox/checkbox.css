@@ -21,6 +21,7 @@
   -ms-user-select: none;
   user-select: none;
   max-width: 67px;
+  margin-bottom: 20px;
 }
 
 .checkboxContainer input {
@@ -31,49 +32,42 @@
   width: 0;
 }
 
-.checkmark {
+.checkmarkContainer {
   position: absolute;
   top: 0;
   left: 0;
-  height: 22px;
-  width: 22px;
+  height: 24px;
+  width: 24px;
   margin-right: 12px;
   background-color: var(--white);
-  border: #d4d4d4 1px solid;
+  border: 1px solid rgba(212, 212, 212, 1);
   border-radius: 4px;
 }
 
-.checkboxContainer:hover input ~ .checkmark {
-  background-color: #ccc;
+.checkboxContainer input:checked ~ .checkmarkContainer:hover {
+  background-color: #5835b0;
 }
 
-/* When the checkbox is checked, add a blue background */
-.checkboxContainer input:checked ~ .checkmark {
+.checkboxContainer input:checked ~ .checkmarkContainer {
   background-color: var(--purple);
 }
 
-/* Create the checkmark/indicator (hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none;
+.checkmark path {
+  fill: var(--white);
 }
 
-/* Show the checkmark when checked */
-.checkboxContainer input:checked ~ .checkmark:after {
+.checkmark {
+  margin: 3px;
+}
+
+.checkboxContainer input:checked ~ .checkmarkContainer > .checkmark {
   display: block;
 }
 
-/* Style the checkmark/indicator */
-.checkboxContainer .checkmark:after {
-  left: 9px;
-  top: 4px;
-  width: 3px;
-  height: 9px;
-  color: var(--white);
-  border: solid white;
-  border-width: 0 2px 2px 0;
-  -webkit-transform: rotate(45deg);
-  -ms-transform: rotate(45deg);
-  transform: rotate(45deg);
+.error {
+  color: rgba(219, 82, 78, 1);
+}
+
+.checkmarkContainer.error {
+  background-color: rgba(249, 227, 227, 1);
 }

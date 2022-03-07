@@ -13,6 +13,10 @@
   margin-bottom: 10px;
 }
 
+.tagContainer:hover .closeButton path {
+  fill: #111111;
+}
+
 .tagContainer span {
   font-weight: bold;
   font-size: 13px;

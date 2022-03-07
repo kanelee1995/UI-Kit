@@ -1,48 +1,46 @@
 import React from "react";
 import "./button.css";
-// import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-// import { faPlus } from "@fortawesome/free-solid-svg-icons";
-import { HiPlus } from "react-icons/hi";
+import { ReactComponent as Plus } from "../Icons/24px/plus.svg";
 
 const Button = (props) => {
   const { variant, children, ...rest } = props;
   return (
     <div className="container">
       <button className={`button ${variant}`} {...rest}>
-        {children}
+        <span className="buttonLabel">{children}</span>
       </button>
       <button className={`button ${variant} Plus `} {...rest}>
         <span className="plusIcon">
           <span>
-            <HiPlus size={24} />
+            <Plus />
           </span>{" "}
         </span>
-        {children}
+        <span className="buttonLabel">{children}</span>
       </button>
       <button className={`button ${variant} Plus NoText `} {...rest}>
         <span className="plusIcon">
           <span>
-            <HiPlus size={24} />
+            <Plus />
           </span>{" "}
         </span>{" "}
       </button>
       <button className={`button ${variant} Plus NoTextCircle `} {...rest}>
         <span className="plusIcon">
           <span>
-            <HiPlus size={24} />
+            <Plus />
           </span>{" "}
         </span>
       </button>
       <button className={`button ${variant} Rounded `} {...rest}>
-        {children}
+        <span className="buttonLabel">{children}</span>
       </button>
       <button className={`button ${variant} Plus Rounded`} {...rest}>
         <span className="plusIcon">
           <span>
-            <HiPlus size={24} />
+            <Plus />
           </span>{" "}
         </span>
-        {children}
+        <span className="buttonLabel">{children}</span>
       </button>
     </div>
   );

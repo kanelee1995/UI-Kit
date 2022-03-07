@@ -40,19 +40,6 @@
   margin: 8px 0 24px 0;
 }
 
-.popupContainer .White {
-  background-color: transparent;
-  border: 2px solid var(--purple);
-  box-sizing: border-box;
-  height: 44px;
-  width: 89px;
-  padding: 0;
-}
-
-.popupContainer .White:hover {
-  background-color: #6f41e210;
-}
-
 .popupContainer.form {
   height: 430px;
   width: 481px;
@@ -77,4 +64,9 @@
 
 .popupContainer .indicatorCheck.err {
   color: var(--white);
+}
+
+.popupButtonGroup {
+  display: flex;
+  flex-direction: row;
 }

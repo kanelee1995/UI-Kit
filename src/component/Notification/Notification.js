@@ -1,5 +1,6 @@
 import React from "react";
 import "./notification.css";
+import Button from "../Button/Button";
 import { MdOutlineCheck } from "react-icons/md";
 import { MdClear } from "react-icons/md";
 import { MdErrorOutline } from "react-icons/md";
@@ -11,8 +12,8 @@ const Notification = ({ children }) => {
         <span className="head">Head</span>
         <span className="description">Description</span>
         <div className="notiButton">
-          <button className="close">Close</button>
-          <button className="help">Help</button>
+          <button className="button Secondary">Close</button>
+          <button className="button Flat">Help</button>
         </div>
         <button className="indicator">
           <span className="indicatorCheck">
@@ -24,8 +25,8 @@ const Notification = ({ children }) => {
         <span className="head">Head</span>
         <span className="description">Description</span>
         <div className="notiButton">
-          <button className="close">Close</button>
-          <button className="help">Help</button>
+        <button className="button Secondary">Close</button>
+          <button className="button Flat">Help</button>
         </div>
         <button className="indicator err">
           <span className="indicatorCheck err">
@@ -37,8 +38,8 @@ const Notification = ({ children }) => {
         <span className="head">Head</span>
         <span className="description">Description</span>
         <div className="notiButton">
-          <button className="close">Close</button>
-          <button className="help">Help</button>
+        <button className="button Secondary">Close</button>
+          <button className="button Flat">Help</button>
         </div>
         <button className="indicator info">
           <span className="indicatorCheck info">

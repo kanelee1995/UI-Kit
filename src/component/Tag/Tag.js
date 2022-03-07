@@ -7,19 +7,19 @@ const Tag = ({ variant }) => {
     <div>
       <div className="tagContainer s">
         <span>Tag</span>
-        <Close />
+        <Close className="closeButton"/>
       </div>
       <div className="tagContainer s primary">
         <span>Tag</span>
-        <Close />
+        <Close className="closeButton"/>
       </div>
       <div className="tagContainer m">
         <span>Tag</span>
-        <Close />
+        <Close className="closeButton"/>
       </div>
       <div className="tagContainer m primary">
         <span>Tag</span>
-        <Close />
+        <Close className="closeButton"/>
       </div>
     </div>
   );
