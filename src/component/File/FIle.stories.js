@@ -5,7 +5,7 @@ export default {
   component: File,
 };
 
-export const DragAnimation = () => <File variant="Default"></File>;
+export const Various = () => <File variant="Default"></File>;
 
 // export const DragFile = () => <File variant="DragFile"></File>;
 // export const Uploading = () => <File variant="Uploading"></File>;

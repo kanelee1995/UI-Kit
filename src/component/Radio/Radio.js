@@ -4,7 +4,7 @@ import "./radio.css";
 const Radio = () => {
   return (
     <label className="checkboxContainer">
-      Text
+      <span className="radioText">Text</span>
       <input id="radio" type={"checkbox"} />
       <span className="checkmark radio"></span>
     </label>

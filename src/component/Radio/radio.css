@@ -33,7 +33,7 @@
 
 .checkmark.radio {
   position: absolute;
-  top: 0;
+  top: -3px;
   left: 0;
   height: 24px;
   width: 24px;
@@ -82,4 +82,8 @@
   -webkit-transform: rotate(45deg);
   -ms-transform: rotate(45deg);
   transform: rotate(45deg); */
+}
+
+.radioText {
+  margin-top: 5px;
 }

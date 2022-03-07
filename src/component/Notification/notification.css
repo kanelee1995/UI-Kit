@@ -31,6 +31,8 @@
 }
 .notiButton {
   grid-area: button;
+  display: flex;
+  flex-direction: row;
 }
 
 /* .close {

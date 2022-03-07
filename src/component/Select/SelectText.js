@@ -54,19 +54,19 @@ const customStyles = {
   input: (provided, state) => ({
     ...provided,
     padding: 0,
-    marginTop: 16,
+    // marginTop: 16,
     marginLeft: 16,
     height: 44,
   }),
 
-  // placeholder: (provided, state) => ({
-  //   ...provided,
-  //   position: "absolute",
-  //   marginLeft: 14,
-  //   transition: `all 0.3s ease`,
-  //   top: state.isFocused ? -4 : 12,
-  //   fontSize: state.isFocused ? 13 : 16,
-  // }),
+  placeholder: (provided, state) => ({
+    ...provided,
+    // position: "absolute",
+    marginLeft: 14,
+    // transition: `all 0.3s ease`,
+    // top: state.isFocused ? 4 : 12,
+    // fontSize: state.isFocused ? 13 : 16,
+  }),
 
   singleValue: (provided, state) => {
     const opacity = state.isDisabled ? 0.5 : 1;
@@ -88,24 +88,24 @@ const Placeholder = (props: PlaceholderProps) => {
 };
 
 const SelectText = () => {
-  const [value, setValue] = useState("");
+  // const [value, setValue] = useState("");
 
-  const handleChange = (e) => {
-    setValue(e.target.value);
-  };
+  // const handleChange = (e) => {
+  //   setValue(e.target.value);
+  // };
 
   return (
     <div className="selectComponent">
       <Select
         options={options}
         styles={customStyles}
-        components={{ DropdownIndicator }}
-        placeholder={""}
+        components={{ DropdownIndicator, Placeholder }}
+        placeholder={"Choose an option..."}
         isClearable
       />
-      <label className={`placeholder live ${value && "filled"} `}>
+      {/* <label className={`placeholder live ${value && "filled"} `}>
         Your Country
-      </label>
+      </label> */}
     </div>
   );
 };

@@ -122,6 +122,6 @@
   transform: translate(0, 6px) scale(0.8);
 }
 
-.inputContainer .filled {
+.placeholder.live.filled {
   transform: translate(0, 6px) scale(0.8);
 }

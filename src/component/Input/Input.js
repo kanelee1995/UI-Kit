@@ -24,7 +24,8 @@ const Input = ({ style, label }) => {
           style={style}
         />
         <label className={`placeholder live ${value && "filled"} `}>
-          {label}        </label>
+          {label}
+        </label>
       </div>
       {/* <div className="inputContainer error">
         <span className="placeholder">Your name</span>
