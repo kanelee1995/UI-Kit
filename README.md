@@ -14,4 +14,5 @@ Third, it is more close to a professional front end developer workflow which mea
 
 Figma
 Storybook
-React-select
+React JS
+CSS
