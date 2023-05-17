@@ -1,8 +1,6 @@
 import React from "react";
-// import { addDecorator } from "@storybook/react";
+import { addParameters } from "@storybook/react";
 import Global from "../src/component/Global/Global";
-
-// addDecorator((story) => <Center>{story()}</Center>);
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },
